@@ -2,4 +2,8 @@ steps:
 
 - id: "Rodando app test"
   name: 'gcr.io/cloud-builders/go'
-  args: ['go', test]
+  args: ['go', 'test']
+
+- id: "Image Build"
+  name: 'gcr.io/cloud-builders/docker'
+  args: ['docker', 'build', '-t', 'desafioci', '.']
