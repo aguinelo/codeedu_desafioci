@@ -8,6 +8,5 @@ steps:
   name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'desafioci', '.']
 
-- id: "Push image"
-  name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'desafioci']
+images:
+  - 'gcr.io/$PROJECT_ID/aguinelo:latest'
