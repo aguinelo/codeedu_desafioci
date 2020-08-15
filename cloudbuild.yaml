@@ -7,3 +7,7 @@ steps:
 - id: "Image Build"
   name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'desafioci', '.']
+
+- id: "Push image"
+  name: 'gcr.io/cloud-builders/docker'
+  args: ['push', desafioci']
